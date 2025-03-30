@@ -27,7 +27,10 @@ El algoritmo utilizado es una variante modificada de **Dijkstra**, implementado 
 #### ⚠️ Penalizaciones:
 Para ajustar las rutas y evitar opciones menos deseables, se aplican las siguientes penalizaciones:
 
+- 🔄 **+10 puntos** por cada **transbordo** (cambio de línea).
+- 🚫 **+15 puntos** si la línea pertenece a la lista `evitar_lineas`.
 
+Este sistema permite priorizar rutas más eficientes y minimizar cambios innecesarios en el trayecto.
 
 ## 📌 Conclusión del Código
 
