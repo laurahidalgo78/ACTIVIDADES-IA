@@ -19,3 +19,17 @@ Modela las estaciones como nodos y los trayectos como aristas con:
 #### ⚙️ Reglas de preferencia:
 - 🔄 **min_transbordos**: Prioriza rutas con menos cambios de línea.
 - 🚫 **evitar_lineas**: Lista de líneas no deseadas. Ejemplo: `['L3']`.
+### 2. Algoritmo de Búsqueda (PlanificadorRutas)
+
+#### 🛤️ Método de búsqueda:
+El algoritmo utilizado es una variante modificada de **Dijkstra**, implementado con una **cola de prioridad (heapq)**. Su objetivo principal es encontrar la ruta con el **menor costo total**, considerando tanto el tiempo de viaje como penalizaciones adicionales.
+
+#### ⚠️ Penalizaciones:
+Para ajustar las rutas y evitar opciones menos deseables, se aplican las siguientes penalizaciones:
+
+- 🔄 **+10 puntos** por cada **transbordo** (cambio de línea).
+- 🚫 **+15 puntos** si la línea pertenece a la lista `evitar_lineas`.
+
+Este sistema permite priorizar rutas más eficientes y minimizar cambios innecesarios en el trayecto.
+
+
