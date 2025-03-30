@@ -7,12 +7,15 @@ Este código implementa un sistema de planificación de rutas para transporte ma
 - Penalizaciones por transbordos. <br>
 - Preferencias personalizables.
 
-<h3>🔍 Componentes Principales</h3>
-1. Base de Conocimiento (BaseConocimiento) <br>
- <br>- Grafo de conexiones: <br>
-   <br>- Modela las estaciones como nodos y los trayectos como aristas con: <br>
-   - Tiempo de viaje (ej. 'A' → 'B': 5 minutos). <br>
-   - Línea de transporte (ej. 'L1'). <br>
-- Reglas de preferencia: <br>
-   - min_transbordos: Prioriza rutas con menos cambios de línea. <br>
-   - evitar_lineas: Lista de líneas no deseadas (ej. ['L3']). <br>
+## 🔍 Componentes Principales
+
+### 1. Base de Conocimiento (BaseConocimiento)
+
+#### 📌 Grafo de conexiones:
+Modela las estaciones como nodos y los trayectos como aristas con:
+- ⏳ **Tiempo de viaje**: Ejemplo: `A → B`: 5 minutos.
+- 🚇 **Línea de transporte**: Ejemplo: `L1`.
+
+#### ⚙️ Reglas de preferencia:
+- 🔄 **min_transbordos**: Prioriza rutas con menos cambios de línea.
+- 🚫 **evitar_lineas**: Lista de líneas no deseadas. Ejemplo: `['L3']`.
